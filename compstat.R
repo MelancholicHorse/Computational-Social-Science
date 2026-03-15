@@ -272,7 +272,6 @@ anova_raw_results <- analysis_threads %>%
   setNames(unique(analysis_threads$subreddit[!is.na(analysis_threads$subreddit)])) %>%
   map(~ aov(comments_n ~ weekday_utc, data = .x))
 
-# View ANOVA summaries
 map(anova_raw_results, summary)
 
 
