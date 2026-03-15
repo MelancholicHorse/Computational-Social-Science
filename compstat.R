@@ -90,7 +90,7 @@ pick_col <- function(df, candidates, default = NA) {
 }
 
 
-# 3============= Collect thread
+#============= Collect thread
 
 thread_urls <- map_dfr(subreddits, function(sr) {
   Sys.sleep(sleep_sec)
